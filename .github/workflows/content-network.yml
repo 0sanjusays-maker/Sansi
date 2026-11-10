@@ -1,0 +1,66 @@
+name: Run content agent network
+
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: Topic for the six-agent network
+        required: true
+        type: string
+      language:
+        description: Content language
+        type: choice
+        options: [Hinglish, Hindi, English]
+        default: Hinglish
+      evidence:
+        description: Dated source excerpts and URLs (not automatically fetched)
+        type: string
+        required: false
+      demo:
+        description: Run illustrative templates without calling a paid AI provider
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  content-network:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare brief
+        env:
+          TOPIC: ${{ inputs.topic }}
+          LANGUAGE: ${{ inputs.language }}
+          EVIDENCE: ${{ inputs.evidence }}
+        run: |
+          node --input-type=module <<'JS'
+          import { readFileSync, writeFileSync } from 'node:fs';
+          const brief = JSON.parse(readFileSync('briefs/example.json', 'utf8'));
+          Object.assign(brief, {topic: process.env.TOPIC, language: process.env.LANGUAGE, evidence: process.env.EVIDENCE || ''});
+          writeFileSync('briefs/workflow.json', JSON.stringify(brief));
+          JS
+      - name: Run six connected agents
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          DEMO: ${{ inputs.demo }}
+        run: |
+          if [ "$DEMO" = "true" ]; then
+            npm run agents -- --brief briefs/workflow.json --demo
+          else
+            npm run agents -- --brief briefs/workflow.json
+          fi
+      - name: Upload results and handoff logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-agent-network-${{ github.run_id }}
+          path: runs/
+          if-no-files-found: ignore
+          retention-days: 14

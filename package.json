@@ -1,0 +1,12 @@
+{
+  "name": "sansi-agent-network",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Six connected video-content agents with CLI and GitHub Actions orchestration",
+  "scripts": {
+    "agents": "node --env-file-if-exists=.env cli.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=22" }
+}
