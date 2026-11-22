@@ -6,6 +6,7 @@
   "description": "Six connected video-content agents with CLI and GitHub Actions orchestration",
   "scripts": {
     "agents": "node --env-file-if-exists=.env cli.js",
+    "horror": "node --env-file-if-exists=.env horror-cli.js",
     "test": "node --test"
   },
   "engines": { "node": ">=22" }
