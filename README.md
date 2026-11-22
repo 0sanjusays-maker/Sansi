@@ -85,11 +85,39 @@ Manual-dispatch workflows normally need to exist on the default branch to appear
 
 Demo mode uses generic English/Hinglish illustrative templates, not topic research. Hindi-only generation requires AI mode; Hindi selection in demo uses Hinglish. Demo script timestamps scale, but the template is roughly 60 seconds: time a read-through and edit for your selected duration. All final content needs fact-checking, license checks and a production review.
 
+## Horror Script Factory (bulk generation + trend verdicts)
+
+`horror.js` + `horror-cli.js` add a second, standalone capability next to the six-agent network: **automatic horror script writing at scale, engagement comparison and trend analysis.** Offline, deterministic and dependency-free.
+
+```sh
+# 2,000 unique scripts + full comparison report + trend verdicts (no API key needed):
+npm run horror -- --count 2000 --seed 42 --trends briefs/horror-trends.json
+
+# Options: --language mixed|hinglish|english  --platform "Instagram Reels"  --duration "60 seconds"  --out runs  --top 10
+```
+
+What one run produces (under `runs/horror-<timestamp>/`):
+
+| File | Contents |
+|---|---|
+| `scripts.ndjson` | Every script: titles, 3 hooks, timestamped spoken script, twist, CTA, sound design |
+| `scripts.csv` | Leaderboard sheet — import into Google Sheets/Excel |
+| `report.md` | Top 10, bottom 5, verdict distribution, factor correlations, group comparisons, key takeaways |
+| `flagship.md` | The #1 ranked script in readable production format |
+| `trends.csv` | Trend comparison (with `--trends`) |
+
+Engagement scoring rates each script on 10 factors (hook, curiosity, tension, payoff, pacing, specificity, emotion, novelty, CTA, platform fit) and labels it **chalega / borderline / nahi chalega**. The trend analyzer ranks your horror trend candidates the same way — with explicit strengths, risks and a verdict per trend.
+
+**Same honesty boundary as Trend Scout.** Trend verdicts are structural hypotheses built from *your* supplied scenario ratings and evidence (`briefs/horror-trends.json` shows the input schema — replace the example placeholders with your own dated observations). No live platform data is fetched or invented; cross-check predictions with your own analytics before betting a series on them. The generator writes fictional stories — keep them clearly fictional and review before publishing.
+
 ## Development
 
 - `agents.js`: six roles, instructions, output schemas, provider calls and explicit demo templates.
 - `network.js`: agent graph, shared-context handoffs, orchestration and Markdown renderer.
 - `cli.js`: headless runner, artifacts, status and logs.
+- `horror.js`: horror script factory — ingredients, deterministic generator, engagement scorer, trend analyzer, report renderers.
+- `horror-cli.js`: bulk batch runner (scripts.ndjson/.csv, analysis, flagship, trend CSV).
+- `briefs/horror-trends.json`: trend-candidate input schema with example placeholders to replace.
 - `.github/workflows/content-network.yml`: manual GitHub runner.
 - `.github/workflows/test.yml`: credential-free CI.
 

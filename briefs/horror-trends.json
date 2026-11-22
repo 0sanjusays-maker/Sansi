@@ -1,0 +1,84 @@
+{
+  "trends": [
+    {
+      "name": "Mumbai local train / night-commute horror",
+      "category": "Folk-urban paranormal",
+      "evidence": "EXAMPLE PLACEHOLDER — replace with your own dated observations (comments, DMs, competitor views). Scenario assumption: high recurring demand for 'last local' stories in Hinglish comment sections.",
+      "demandSignal": 9, "hookPotential": 9, "repeatability": 9,
+      "productionDifficulty": 2, "saturation": 6, "longevityMonths": 11, "platformCount": 5,
+      "recommendation": "Strongest long-term bet: rules-based hooks + mimic-voice twist, weekly series format."
+    },
+    {
+      "name": "AI / deepfake voice horror (call from your own number)",
+      "category": "Tech horror",
+      "evidence": "EXAMPLE PLACEHOLDER — supply your own dated evidence. Scenario assumption: curiosity spikes around phone-based horror; novelty is fresh but format unproven.",
+      "demandSignal": 7, "hookPotential": 9, "repeatability": 6,
+      "productionDifficulty": 4, "saturation": 4, "longevityMonths": 7, "platformCount": 4,
+      "recommendation": "Fresh angle, hook-strong. Pair with 'recorded call' hook style; batch 6–8 episodes max."
+    },
+    {
+      "name": "Folk horror — chudail / djinn / daivik kahaniyan",
+      "category": "Folk horror",
+      "evidence": "EXAMPLE PLACEHOLDER — replace with your own dated observations. Scenario assumption: evergreen audience across age groups, especially Hindi-belt viewers.",
+      "demandSignal": 8, "hookPotential": 8, "repeatability": 9,
+      "productionDifficulty": 3, "saturation": 7, "longevityMonths": 12, "platformCount": 5,
+      "recommendation": "Evergreen + repeatable. Differentiate with village-specific folklore and rule-based storytelling."
+    },
+    {
+      "name": "Sleep-paralysis / 3 AM challenge horror",
+      "category": "Psychological",
+      "evidence": "EXAMPLE PLACEHOLDER — replace with your own dated evidence. Scenario assumption: short spike cycles; challenge-driven but saturated.",
+      "demandSignal": 6, "hookPotential": 8, "repeatability": 5,
+      "productionDifficulty": 2, "saturation": 8, "longevityMonths": 4, "platformCount": 4,
+      "recommendation": "Trend-hopping only. Good for a 2-week spike series, not a channel identity."
+    },
+    {
+      "name": "Hospital / night-shift horror",
+      "category": "Workplace paranormal",
+      "evidence": "EXAMPLE PLACEHOLDER — replace with your own dated evidence. Scenario assumption: strong relatability among working 18–30 audience.",
+      "demandSignal": 7, "hookPotential": 7, "repeatability": 7,
+      "productionDifficulty": 3, "saturation": 5, "longevityMonths": 8, "platformCount": 4,
+      "recommendation": "Solid secondary series. Pair with first-person confession hooks from real work settings."
+    },
+    {
+      "name": "Liminal spaces / backrooms horror",
+      "category": "Cosmic-uncanny",
+      "evidence": "EXAMPLE PLACEHOLDER — replace with your own dated evidence. Scenario assumption: visual-format dependent; Hindi audio engagement unproven.",
+      "demandSignal": 5, "hookPotential": 6, "repeatability": 5,
+      "productionDifficulty": 6, "saturation": 6, "longevityMonths": 5, "platformCount": 3,
+      "recommendation": "Risky for Hinglish audio-first. Works only if you invest in visuals; test with 3 videos."
+    },
+    {
+      "name": "True-crime + paranormal crossover",
+      "category": "Hybrid documentary",
+      "evidence": "EXAMPLE PLACEHOLDER — replace with your own dated evidence. Scenario assumption: high watch-time potential but heavy research burden and sensitivity risk.",
+      "demandSignal": 8, "hookPotential": 7, "repeatability": 6,
+      "productionDifficulty": 8, "saturation": 7, "longevityMonths": 9, "platformCount": 4,
+      "recommendation": "High reward, high effort. One well-researched episode/month beats weekly thin takes; fact-check rigor mandatory."
+    },
+    {
+      "name": "Horror-comedy (Funny horror skits)",
+      "category": "Horror comedy",
+      "evidence": "EXAMPLE PLACEHOLDER — replace with your own dated evidence. Scenario assumption: shareable but weaker retention on pure-horror audience.",
+      "demandSignal": 6, "hookPotential": 7, "repeatability": 8,
+      "productionDifficulty": 5, "saturation": 7, "longevityMonths": 6, "platformCount": 5,
+      "recommendation": "Good reach vehicle, weak authority builder. Use as side content, not the core channel."
+    },
+    {
+      "name": "Creepypasta revival (pasta-pasta stories, Reddit horror)",
+      "category": "Urban legend",
+      "evidence": "EXAMPLE PLACEHOLDER — replace with your own dated evidence. Scenario assumption: steady niche, weak breakout potential in Hindi market.",
+      "demandSignal": 4, "hookPotential": 5, "repeatability": 7,
+      "productionDifficulty": 3, "saturation": 5, "longevityMonths": 8, "platformCount": 3,
+      "recommendation": "Niche-safe filler. Translate-and-tell only if credits are clear; low breakout expectation."
+    },
+    {
+      "name": "Possession / exorcism live-format (aghor, ojha, live bhoot-pret)",
+      "category": "Ritual horror",
+      "evidence": "EXAMPLE PLACEHOLDER — replace with your own dated evidence. Scenario assumption: sensational but platform-moderation and authenticity risk is high.",
+      "demandSignal": 7, "hookPotential": 8, "repeatability": 6,
+      "productionDifficulty": 7, "saturation": 8, "longevityMonths": 5, "platformCount": 3,
+      "recommendation": "High risk: moderation + credibility. Agar karo to clearly fictional framing rakho, real-claims mat karo."
+    }
+  ]
+}
